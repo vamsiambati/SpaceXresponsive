@@ -8,7 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## To Test
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the repo and install node modules using `npm install` (Node Package Manager is required)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Approach
 
