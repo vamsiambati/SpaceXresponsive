@@ -1,0 +1,156 @@
+
+  .main-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap:wrap;
+    .filters{
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width:100%;
+        text-align: center;
+        padding:10px;
+        .title{
+            width:100%;
+            padding:10px;
+            span{
+                width:100%;
+                color:black;
+                font-weight: lighter;
+                font-size: medium;
+            }
+            hr{
+                width: 80%;
+                height:2px;
+                border-width:0;
+                color:gray;
+                background-color:gray
+            }
+        }
+        
+    };
+    .items{
+        width: 100%;
+        .card{
+            flex: 0 100%;
+            min-height: 200px;
+            margin-bottom: 15px;
+        }
+    }
+  }
+  
+   .card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    img{
+        width: 100%;
+        background-color: lightgray;
+    }
+    .mission-title{
+        width:100%;
+        color:royalblue;
+        margin-bottom: 15px;
+    }
+    .mission-launch-year, .mission-SLaunch, .mission-SLand{
+        width:100%;
+        display: flex;
+        span{
+            color:royalblue;
+            font-size: 14px;
+        }
+    }
+   
+  }
+
+  h5{
+    margin:0 0 5px 0;
+    }
+    ul{
+        margin:0;
+        color: royalblue;
+        font-size: 14px;
+    }
+
+  //Tablet
+  @media (min-width: 700px) and (max-width: 1024px) {
+    .main-grid {
+      display: flex;
+      flex-direction: row;
+      .filters{
+        width:19%;
+        max-height: 555px;
+    };
+      .items {
+        display: flex;
+        flex-wrap:wrap;
+        width: 80%;
+        .card{
+            flex: 0 23%;
+            min-height: 200px;
+            margin:  0 10px 15px 0;
+            max-height: min-content;
+        }
+      }
+    }
+  }
+//Desktop
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .main-grid {
+      display: flex;
+      flex-direction: row;
+      .filters{
+        width:19%;
+        max-height: 555px;
+    };
+      .items {
+        width: 80%;
+        display: flex;
+        flex-wrap:wrap;
+        .card{
+            flex: 0 23%;
+            min-height: 200px;
+            margin: 0 10px 15px 0;
+            max-height: min-content;
+        }
+      }
+    }
+  }
+
+  .filter-buttons{
+      display: flex;
+      width:100%;
+      flex-wrap:wrap;
+      justify-content: space-between;
+      .filter-button{
+        flex:0 45%;
+        background-color: lightgreen;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        display: block;
+        position: relative;
+        //cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        label{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+        input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+       
+      }
+  }
+  .highlight-filter{
+    background-color: green !important;
+  }
