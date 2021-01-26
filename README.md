@@ -13,13 +13,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Approach
 
 Used FlexBox CSS and Used queries to delvelop the responsive UI
-    * Code can be fount in app.component.css
-    * For Filter Options used radio groups and hid the native radio selector using css
-    * Used `ngClass` directive to highlight the selected radio option
+*Code can be fount in app.component.css
+*For Filter Options used radio groups and hid the native radio selector using css
+*Used `ngClass` directive to highlight the selected radio option
 
 Used Angular Reactive Forms to develop filter functionality
-    * Disabled filters on API request using Angular Reactive Forms
-    * Subscribed to the form changes and then based on the changes created a querysting and called the API
-    * Used Angular Services to reduce code duplication
+*Disabled filters on API request using Angular Reactive Forms
+*Subscribed to the form changes and then based on the changes created a querysting and called the API
+*Used Angular Services to reduce code duplication
 
 Deployed app in Google Firebase
