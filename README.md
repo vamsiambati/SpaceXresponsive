@@ -1,27 +1,25 @@
-# PublicIsSapientDemo
+# Assignment for PublicIs Sapient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2 by Vamsi Ambati
 
-## Development server
+## Live Server
+
+[CLICK HERE](https://spacex-vamsiambati.web.app)
+
+## To Test
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Approach
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Used FlexBox CSS and Used queries to delvelop the responsive UI
+    * Code can be fount in app.component.css
+    * For Filter Options used radio groups and hid the native radio selector using css
+    * Used `ngClass` directive to highlight the selected radio option
 
-## Build
+Used Angular Reactive Forms to develop filter functionality
+    * Disabled filters on API request using Angular Reactive Forms
+    * Subscribed to the form changes and then based on the changes created a querysting and called the API
+    * Used Angular Services to reduce code duplication
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Deployed app in Google Firebase
