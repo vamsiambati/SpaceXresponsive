@@ -61,6 +61,12 @@
     
   </div>
   <div class="items">
+    <div class="no-results" *ngIf="!loading && flights.length ==0">
+      <h2>No Results</h2>
+    </div>
+    <div class="no-results" *ngIf="loading">
+      <h2>Please Wait</h2>
+    </div>
     <div class="card" *ngFor="let flight of flights; let i = index">
       <img [src]="flight.links.mission_patch" >
       <div class="mission-title">
