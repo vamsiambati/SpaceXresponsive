@@ -58,7 +58,7 @@
         display: flex;
         span{
             color:royalblue;
-            font-size: 14px;
+            font-size: small;
         }
     }
    
@@ -70,7 +70,7 @@
     ul{
         margin:0;
         color: royalblue;
-        font-size: 14px;
+        font-size: small;
     }
 
   //Tablet
@@ -133,6 +133,7 @@
         label{
             cursor: pointer;
             flex:1;
+            font-size: small;
         }
         input{
             position: absolute;
