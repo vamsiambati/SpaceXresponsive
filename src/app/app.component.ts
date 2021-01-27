@@ -63,4 +63,28 @@ export class AppComponent implements OnInit {
     this.loading=false
     })
   }
+  checkClear(filter:string,buttonId:string){
+    switch(filter){
+      case "year":
+        if(this.spaceForm.get("year").value == buttonId){
+          console.log(filter,buttonId)
+          this.spaceForm.get("year").setValue("");
+        }
+        break;
+      case "slaunch":  
+        if(this.spaceForm.get("slaunch").value == buttonId){
+          console.log(filter,buttonId)
+          this.spaceForm.get("slaunch").setValue("");
+        }
+        break;
+      case "sland":  
+        if(this.spaceForm.get("sland").value == buttonId){
+          console.log(filter,buttonId)
+          this.spaceForm.get("sland").setValue("");
+        }
+        break;  
+      default:
+        break;  
+    }
+  }
 }

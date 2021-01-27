@@ -14,8 +14,8 @@
         </div>
         <div class="filter-buttons">
           <div class="filter-button" *ngFor="let year of years" [ngClass]="{'highlight-filter':this.selectedYear == year}">
-            <label for="{{year}}" >
-              <input type="radio" id="{{year}}" formControlName="year" value="{{year}}" >
+            <label for="{{year}}">
+              <input type="radio" id="{{year}}" formControlName="year" value="{{year}}" (click)="checkClear('year',year)">
             {{year}}
             </label>
           </div>
@@ -28,12 +28,12 @@
         <div class="filter-buttons">
           <div class="filter-button" [ngClass]="{'highlight-filter':this.launched == 'true'}">
             <label for="slaunch_true">
-            <input type="radio" id="slaunch_true" formControlName="slaunch" value="true" >True
+            <input type="radio" id="slaunch_true" formControlName="slaunch" value="true" (click)="checkClear('slaunch','true')">True
             </label>
           </div>
           <div class="filter-button" [ngClass]="{'highlight-filter':this.launched == 'false'}">
             <label for="slaunch_false">
-            <input type="radio" id="slaunch_false" formControlName="slaunch" value="false" >False
+            <input type="radio" id="slaunch_false" formControlName="slaunch" value="false" (click)="checkClear('slaunch','false')">False
             </label>
           </div>
         </div>
@@ -45,12 +45,12 @@
         <div class="filter-buttons">
           <div class="filter-button" [ngClass]="{'highlight-filter':this.landed == 'true'}">
             <label for="sland_true">
-            <input type="radio" id="sland_true" formControlName="sland" value="true" >True
+            <input type="radio" id="sland_true" formControlName="sland" value="true" (click)="checkClear('sland','true')">True
             </label>
           </div>
           <div class="filter-button" [ngClass]="{'highlight-filter':this.landed == 'false'}">
             <label for="sland_false">
-            <input type="radio" id="sland_false" formControlName="sland" value="false" >False
+            <input type="radio" id="sland_false" formControlName="sland" value="false" (click)="checkClear('sland','false')">False
             </label>
           </div>
         </div>
@@ -85,7 +85,7 @@
         <h5>Successful Launch: </h5><span>{{flight.launch_success}}</span>
       </div>
       <div class="mission-SLand">
-        <h5>Successful Landing: </h5><span>{{flight.launch_success}}</span>
+        <h5>Successful Landing: </h5><span>{{flight.rocket.first_stage.cores[0].land_success !== null ? flight.rocket.first_stage.cores[0].land_success: 'NA'}}</span>
       </div>
     </div>
   </div>
