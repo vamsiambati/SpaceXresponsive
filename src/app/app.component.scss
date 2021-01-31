@@ -1,7 +1,9 @@
 
   .main-grid {
     display: flex;
-    justify-content: space-between;
+    min-width: 100%;
+    max-width: 1440px;
+    justify-content: space-around;
     flex-direction: column;
     flex-wrap:wrap;
     .filters{
@@ -35,7 +37,7 @@
         .card{
             flex: 0 100%;
             min-height: 200px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
     }
   }
@@ -78,28 +80,30 @@
     .main-grid {
       display: flex;
       flex-direction: row;
+      min-width: 700px;
       .filters{
-        width:19%;
+        width:32%;
         max-height: 570px;
     };
       .items {
         display: flex;
         flex-wrap:wrap;
-        width: 80%;
+        width: 65%;
+        justify-content: inherit;
         .card{
-            flex: 0 23%;
+            flex: 0 49%;
             min-height: 200px;
-            margin:  0 10px 15px 0;
             max-height: min-content;
         }
       }
     }
   }
 //Desktop
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px)  {
     .main-grid {
       display: flex;
       flex-direction: row;
+      min-width: 1024px;
       .filters{
         width:19%;
         max-height: 570px;
@@ -108,10 +112,10 @@
         width: 80%;
         display: flex;
         flex-wrap:wrap;
+        justify-content: inherit;
         .card{
-            flex: 0 23%;
+            flex: 0 24%;
             min-height: 200px;
-            margin: 0 10px 15px 0;
             max-height: min-content;
         }
       }
@@ -151,9 +155,24 @@
 .no-results{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: white;
     border-radius: 5px;
     max-height: 75px;
     margin-bottom: 10px;
+}
+
+@media (min-width: 1440px)  {
+  .main-container {
+    display: flex;
+    justify-content: center;
+  }
+  .main-grid{
+    min-width: 1440px;
+  }
+}
+
+.app-title{
+  display: flex;
+  justify-content: center;
 }
